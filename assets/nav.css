@@ -40,13 +40,9 @@ footer .footer .footer-logo img {
 footer .footer .footer-links {
   display: flex;
   flex-direction: column;
+  gap: 7px;
 }
 footer .footer .footer-links a {
   color: white;
   font: 400 14px/1.5em "Roboto", sans-serif;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=nav.css.map */

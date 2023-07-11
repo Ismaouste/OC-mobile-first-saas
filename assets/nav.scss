@@ -1,0 +1,56 @@
+// incldue var.scss
+@import "var";
+
+header {
+  text-align: center;
+
+  nav {
+    display: flex;
+    height: 63px;
+    align-items: center;
+    justify-content: center;
+
+    @include shadow;
+
+    .logo img {
+      height: 36px;
+    }
+  }
+  .location {
+    display: flex;
+    justify-content: center;
+    background-color: $ohmylightgrey;
+    color: $ohmygrey;
+    height: 50px;
+  }
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 22px 25px;
+    background-color: #353535;
+
+    .footer-logo img {
+      filter: invert(1);
+      height: 27px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+
+      a {
+        color: white;
+        font: 400 14px/1.5em "Roboto", sans-serif;
+      }
+    }
+  }
+}

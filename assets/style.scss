@@ -1,16 +1,7 @@
-$ohmygreen : #99E2D0;
-$ohmydarkgreen : #008766;
-$ohmyblue : #89C8FA;
-$ohmydarkblue : #003A68;
-$ohmypurple : #9356DC;
-$ohmygrey : #353535;
+@import "nav";
 
-@mixin shadow {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-nav {
-    height: 63px;
-    @include shadow;
-}
-
-
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+  }
+  

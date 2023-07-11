@@ -1,0 +1,18 @@
+$ohmygreen: #99e2d0;
+$ohmydarkgreen: #008766;
+$ohmyblue: #89c8fa;
+$ohmydarkblue: #003a68;
+$ohmypurple: #9356dc;
+$ohmygrey: #353535;
+$ohmylightgrey: #eaeaea;
+
+@mixin google-font($family) {
+  @import url("http://fonts.googleapis.com/css?family=#{$family}");
+}
+
+@include google-font("Roboto:400,700");
+@include google-font("Shrikhand");
+
+@mixin shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
