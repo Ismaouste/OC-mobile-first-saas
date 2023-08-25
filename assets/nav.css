@@ -1,5 +1,26 @@
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,700");
 @import url("http://fonts.googleapis.com/css?family=Shrikhand");
+@keyframes bgcolor {
+  0% {
+    background: -webkit-linear-gradient(13deg, rgba(255, 121, 217, 0) 0%, rgba(187, 98, 219, 0) 66%);
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: -webkit-linear-gradient(13deg, rgba(255, 121, 217, 0.5) 0%, rgba(186, 98, 219, 0.5) 66%);
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: -webkit-linear-gradient(13deg, rgb(255, 121, 218) 0%, rgb(186, 98, 219) 66%);
+    font-weight: 900;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 header {
   text-align: center;
 }
@@ -16,14 +37,13 @@ header nav .logo img {
 header .location {
   display: flex;
   justify-content: center;
-  background-color: #eaeaea;
+  background-color: #f6f6f6;
   color: #353535;
   height: 50px;
 }
 
 footer {
   width: 100%;
-  position: fixed;
   bottom: 0;
 }
 footer .footer {
