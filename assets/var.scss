@@ -9,7 +9,6 @@ $ohmygrey: #353535;
 $ohmylightgrey: #f6f6f6;
 $ohmylightergrey: #eaeaea;
 
-
 @mixin google-font($family) {
   @import url("http://fonts.googleapis.com/css?family=#{$family}");
 }
@@ -21,22 +20,20 @@ $ohmylightergrey: #eaeaea;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-@mixin cta-button($color) {
-  background: $color;
-  box-shadow: 1px 11px 14px 0px rgba(130,130,130,0.38);
+@mixin cta-button($color1, $color2) {
+  background: linear-gradient(180deg, $color1 0%, $color2 100%);
+  box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.38);
   padding: 20px;
   color: #FFF;
-  font-family: "Roboto";
   text-decoration: none;
   border-radius: 50px;
   transition: 500ms;
-  
+
   &:hover {
-    background: lighten($color, 10%); // Lighten the color on hover
+    background: linear-gradient(180deg, lighten($color1, 10%) 0%, lighten($color2, 10%) 100%);
     box-shadow: 1px 11px 14px 0px rgba(109, 109, 109, 0.699);
   }
 }
-
 
 @keyframes bgcolor {
   0% {
@@ -73,6 +70,3 @@ $ohmylightergrey: #eaeaea;
     -webkit-text-fill-color: transparent;
   }
 }
-
-  
-

@@ -1,6 +1,19 @@
 // incldue var.scss
 @import "var";
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.gray-background {
+  background-color: $ohmylightgrey;
+}
+
 header {
   text-align: center;
 
@@ -19,7 +32,7 @@ header {
   .location {
     display: flex;
     justify-content: center;
-    background-color: $ohmylightgrey;
+    background-color: $ohmylightergrey;
     color: $ohmygrey;
     height: 50px;
   }
@@ -27,7 +40,6 @@ header {
 
 footer {
   width: 100%;
-  // position: fixed;
   bottom: 0;
 
   .footer {
@@ -50,6 +62,7 @@ footer {
       a {
         color: white;
         font: 400 14px/1.5em "Roboto", sans-serif;
+        text-decoration: none;
       }
     }
   }

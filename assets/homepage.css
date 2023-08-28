@@ -21,17 +21,17 @@
     -webkit-text-fill-color: transparent;
   }
 }
-.fa-heart {
-  font-size: 1.3em;
+* {
+  box-sizing: border-box;
 }
-.fa-heart:hover {
-  animation: bgcolor 0.5s;
-  font-weight: 900;
-  background: -webkit-linear-gradient(13deg, rgb(255, 121, 218) 0%, rgb(186, 98, 219) 66%);
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: pointer;
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.gray-background {
+  background-color: #f6f6f6;
 }
 
 header {
@@ -50,7 +50,7 @@ header nav .logo img {
 header .location {
   display: flex;
   justify-content: center;
-  background-color: #f6f6f6;
+  background-color: #eaeaea;
   color: #353535;
   height: 50px;
 }
@@ -78,22 +78,23 @@ footer .footer .footer-links {
 footer .footer .footer-links a {
   color: white;
   font: 400 14px/1.5em "Roboto", sans-serif;
+  text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
+.badge-new::after {
+  content: "Nouveau";
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 2px;
+  background-color: #99e2d0;
+  color: #008766;
 }
 
 section {
-  display: flex;
   padding: 20px;
-  align-items: center;
-  flex-direction: column;
 }
 section img {
   width: -webkit-fill-available;
@@ -104,12 +105,25 @@ section h1 {
   margin-right: auto;
 }
 section.section, section .section {
-  justify-content: center;
-  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   text-align: center;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  section.section, section .section {
+    flex-direction: column;
+  }
 }
 section.section-landing, section .section-landing {
+  display: flex;
   text-align: center;
+  background-color: #f6f6f6;
+  min-height: 290px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #f6f6f6;
   min-height: 290px;
 }
@@ -125,17 +139,16 @@ section.section-landing p, section .section-landing p {
   width: 90%;
 }
 section.section-landing a, section .section-landing a {
-  background: #ff79da;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.38);
   padding: 20px;
   color: #FFF;
-  font-family: "Roboto";
   text-decoration: none;
   border-radius: 50px;
   transition: 500ms;
 }
 section.section-landing a:hover, section .section-landing a:hover {
-  background: #fface8;
+  background: linear-gradient(180deg, #fface8 0%, #ae80e5 100%);
   box-shadow: 1px 11px 14px 0px rgba(109, 109, 109, 0.699);
 }
 section.section-steps_card, section .section-steps_card {
@@ -143,7 +156,7 @@ section.section-steps_card, section .section-steps_card {
   align-items: center;
   flex-wrap: wrap;
   background-color: #f6f6f6;
-  padding: 20px 35px 20px 35px;
+  padding: 20px 35px;
   border-radius: 20px;
   position: relative;
   margin-bottom: 30px;
@@ -191,18 +204,6 @@ section.section-restaurants-card, section .section-restaurants-card {
     width: 100%;
   }
 }
-section.section-restaurants-card .new::after, section .section-restaurants-card .new::after {
-  content: "Nouveau";
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  font-family: "Roboto";
-  font-weight: 700;
-  background-color: #99e2d0;
-  color: #008766;
-  padding: 10px;
-  border-radius: 2px;
-}
 section.section-restaurants-card a, section .section-restaurants-card a {
   text-decoration: none;
   color: #000;
@@ -236,11 +237,11 @@ section.section-restaurants-card-content .fa-heart, section .section-restaurants
   font-size: 1.3em;
 }
 section.section-restaurants-card-content .fa-heart:hover, section .section-restaurants-card-content .fa-heart:hover {
-  animation: bgcolor 0.5s;
+  animation: bgcolor 0.2s;
   font-weight: 900;
   background: -webkit-linear-gradient(13deg, #ff79da 0%, #9356dc 66%);
   color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=homepage.css.map */
