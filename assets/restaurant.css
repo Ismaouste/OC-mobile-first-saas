@@ -79,4 +79,31 @@ footer .footer .footer-links a {
   color: white;
   font: 400 14px/1.5em "Roboto", sans-serif;
   text-decoration: none;
+}
+
+section {
+  padding: 20px;
+}
+section.menu-header h1 {
+  font-family: shrikhand, cursive;
+  font-size: calc(24px + 16 * (100vw - 300px) / 1300);
+  font-weight: 700;
+  margin-right: auto;
+}
+section.menu-footer {
+  display: flex;
+  justify-content: center;
+}
+section.menu-footer a {
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.38);
+  padding: 20px;
+  color: #FFF;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: 500ms;
+}
+section.menu-footer a:hover {
+  background: linear-gradient(180deg, #fface8 0%, #ae80e5 100%);
+  box-shadow: 1px 11px 14px 0px rgba(109, 109, 109, 0.699);
 }/*# sourceMappingURL=restaurant.css.map */
