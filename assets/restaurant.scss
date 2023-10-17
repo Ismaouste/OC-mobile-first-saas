@@ -1,15 +1,23 @@
 @import "nav";
 
-section {
-    padding: 20px;
+img {
+    width: -webkit-fill-available;
+}
 
-    &.menu {
+section {
+    margin-top: -4rem;
+    border-radius: 2rem 2rem 0 0;
+    padding: 20px;
+    background-color: $ohmylightgrey;
+    position: relative;
+}
+    .menu {
         &-header {
             h1 {
                 font-family: shrikhand, cursive;
-                font-size: calc(24px + (40 - 24) * ((100vw - 300px) / (1600 - 300)));
+                font-size: 1.5rem;
                 font-weight: 700;
-                margin-right: auto;
+                margin: 0 auto 0 0;
             }
         }
         &-footer {
@@ -20,5 +28,16 @@ section {
                 @include cta-button($ohmypink, $ohmypurple);
               }
         }
+        &-content {
+            h2:after {
+                content: "";
+                width: 3rem;
+                height: 0.25rem;
+                background-color: $ohmyblue;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
     }
-}
+

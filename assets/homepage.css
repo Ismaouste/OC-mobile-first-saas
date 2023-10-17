@@ -100,7 +100,7 @@ section img {
   width: -webkit-fill-available;
 }
 section h1 {
-  font-size: calc(24px + 16 * (100vw - 300px) / 1300);
+  font-size: 1.5rem;
   font-weight: 700;
   margin-right: auto;
 }
