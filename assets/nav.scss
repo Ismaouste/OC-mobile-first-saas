@@ -1,7 +1,5 @@
-// incldue var.scss
-@import "var";
-
-* {
+@import "var"; 
+* { 
   box-sizing: border-box;
 }
 
@@ -14,7 +12,7 @@ body {
   background-color: $ohmylightgrey;
 }
 
-header {
+header { 
   text-align: center;
 
   nav {

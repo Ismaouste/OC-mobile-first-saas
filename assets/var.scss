@@ -16,57 +16,23 @@ $ohmylightergrey: #eaeaea;
 @include google-font("Roboto:400,700");
 @include google-font("Shrikhand");
 
+
+
 @mixin shadow {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 @mixin cta-button($color1, $color2) {
-  background: linear-gradient(180deg, $color1 0%, $color2 100%);
-  box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.38);
+  background: linear-gradient(180deg, lighten($color1, 10%) 0%, lighten($color2, 10%) 100%);
+  box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.4);
   padding: 20px;
   color: #FFF;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 25px;
   transition: 500ms;
 
   &:hover {
-    background: linear-gradient(180deg, lighten($color1, 10%) 0%, lighten($color2, 10%) 100%);
-    box-shadow: 1px 11px 14px 0px rgba(109, 109, 109, 0.699);
-  }
-}
-
-@keyframes bgcolor {
-  0% {
-    background: -webkit-linear-gradient(
-      13deg,
-      rgba(255, 121, 217, 0) 0%,
-      rgba(187, 98, 219, 0) 66%
-    );
-    color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  50% {
-    background: -webkit-linear-gradient(
-      13deg,
-      rgba(255, 121, 217, 0.5) 0%,
-      rgba(186, 98, 219, 0.5) 66%
-    );
-    color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  100% {
-    background: -webkit-linear-gradient(
-      13deg,
-      rgba(255,121,218,1) 0%,
-      rgba(186,98,219,1) 66%
-    );
-    font-weight: 900;
-    color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(180deg, lighten($color1, 20%) 0%, lighten($color2, 20%) 100%);
+    box-shadow: 1px 13px 17px 0px rgba(109, 109, 109, 0.7);
   }
 }
