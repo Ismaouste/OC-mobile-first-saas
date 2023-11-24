@@ -8,11 +8,21 @@ img {
   0% {
     transform: rotate(-270deg);
   }
+
   100% {
     transform: rotate(0);
   }
 }
 
+@keyframes itemAppear {
+  0% {
+    transform: scale(0)
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 
 $fade-in-duration: 2.5s; // Set the animation duration
 $initial-opacity: 0.5; // Initial opacity
@@ -93,10 +103,15 @@ section {
       margin-bottom: 2em;
       position: relative;
       overflow: hidden;
+
+      animation: itemAppear .6s;
+      animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+      animation-fill-mode: both;
+      transform: scale(0);
+      max-width: 100%;
+
       :hover {
         cursor: pointer;
-        
-
       }
 
       &-text {
@@ -125,7 +140,6 @@ section {
         align-items: flex-end;
         margin-left: auto;
         padding-right: 1em;
-        padding-bottom: 1em;
       }
 
       &-check {
@@ -138,7 +152,7 @@ section {
         transition: all 0.5s;
         justify-content: center;
 
-        
+
         i {
           display: grid;
           place-items: center;
@@ -152,11 +166,17 @@ section {
     }
   }
 }
+
 .menu-content-item:hover .menu-content-item-check {
   margin-right: 0;
+
   i {
     animation: spin 0.75s ease;
   }
 }
 
-
+@for $i from 1 through 9 {
+  .delay-#{$i} {
+    animation-delay: ($i - 1) * 0.1s;
+  }
+}
