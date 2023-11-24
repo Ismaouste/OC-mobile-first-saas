@@ -71,6 +71,7 @@ footer .footer {
 footer .footer .footer-logo img {
   filter: invert(1);
   height: 27px;
+  width: auto;
 }
 footer .footer .footer-links {
   display: flex;
