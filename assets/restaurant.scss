@@ -1,8 +1,18 @@
 @import "nav";
 
 img {
-    width: -webkit-fill-available;
+  width: -webkit-fill-available;
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 
 $fade-in-duration: 2.5s; // Set the animation duration
 $initial-opacity: 0.5; // Initial opacity
@@ -20,6 +30,7 @@ $final-translate: 0; // Final translation
       opacity: $initial-opacity;
       transform: translateY($initial-translate);
     }
+
     100% {
       opacity: $final-opacity;
       transform: translateY($final-translate);
@@ -28,49 +39,124 @@ $final-translate: 0; // Final translation
 }
 
 section {
-    margin-top: -4rem;
-    border-radius: 2rem 2rem 0 0;
-    padding: 20px;
-    background-color: $ohmylightgrey;
-    position: relative;
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  padding: 20px;
+  background-color: $ohmylightgrey;
+  position: relative;
 
 }
-    .menu {
-        &-header {
-            h1 {
-                font-family: shrikhand, cursive;
-                font-size: 1.5rem;
-                font-weight: 700;
-                margin: 0 auto 0 0;
-            }
-        }
-        &-footer {
-            display: flex;
-            justify-content: center;
 
-            a {
-                @include cta-button($ohmypink, $ohmypurple);
-              }
-        }
-        &-content {
-            h2:after {
-                content: "";
-                width: 3rem;
-                height: 0.25rem;
-                background-color: $ohmyblue;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-            }
-              &-item {
-                background-color: #fff;
-                border-radius: 10px;
-                width: 335px;
-                box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
-                margin-bottom: 2em;
-                position: relative;
-                      }
-
+.menu {
+  &-header {
+    h1 {
+      font-family: shrikhand, cursive;
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 auto 0 0;
     }
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: center;
+
+    a {
+      @include cta-button($ohmypink, $ohmypurple);
+    }
+  }
+
+  &-content {
+    h2 {
+      padding-top: 32px;
+      font-family: "Roboto", sans-serif;
+      text-transform: uppercase;
+      position: relative;
+      font-weight: 300;
+    }
+
+    h2:after {
+      content: "";
+      width: 3rem;
+      height: 0.25rem;
+      background-color: $ohmygreen;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+    }
+
+    &-item {
+      display: flex;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
+      margin-bottom: 2em;
+      position: relative;
+      overflow: hidden;
+      :hover {
+        cursor: pointer;
+        
+
+      }
+
+      &-text {
+        padding: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        h3 {
+          font-family: "Roboto", sans-serif;
+          font-weight: 500;
+          font-size: 1.2rem;
+          margin: 0;
+        }
+
+        p {
+          font-family: "Roboto", sans-serif;
+          font-weight: 300;
+          font-size: 1rem;
+          margin: 0;
+        }
+      }
+
+      &-price {
+        display: flex;
+        align-items: flex-end;
+        margin-left: auto;
+        padding-right: 1em;
+        padding-bottom: 1em;
+      }
+
+      &-check {
+        display: flex;
+        place-items: center;
+        background-color: #99e2d0;
+        margin-right: -4em;
+        border-radius: 0px 20px 20px 0px;
+        width: 4em;
+        transition: all 0.5s;
+        justify-content: center;
+
+        
+        i {
+          display: grid;
+          place-items: center;
+          color: #99e2d0;
+          width: 24px;
+          border-radius: 32px;
+          background-color: white;
+          aspect-ratio: 1/1;
+        }
+      }
+    }
+  }
 }
+.menu-content-item:hover .menu-content-item-check {
+  margin-right: 0;
+  i {
+    animation: spin 0.75s ease;
+  }
+}
+
 

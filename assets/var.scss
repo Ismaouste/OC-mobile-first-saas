@@ -13,7 +13,7 @@ $ohmylightergrey: #eaeaea;
   @import url("http://fonts.googleapis.com/css?family=#{$family}");
 }
 
-@include google-font("Roboto:400,700");
+@include google-font("Roboto:300,400,500,700");
 @include google-font("Shrikhand");
 
 
@@ -34,5 +34,31 @@ $ohmylightergrey: #eaeaea;
   &:hover {
     background: linear-gradient(180deg, lighten($color1, 20%) 0%, lighten($color2, 20%) 100%);
     box-shadow: 1px 13px 17px 0px rgba(109, 109, 109, 0.7);
+  }
+}
+
+
+.like-button {
+  position: relative;
+
+  i {
+    color: black;
+    font-size: 26px;
+    position: absolute;
+    right: 34px;
+    top: -43px;
+    transform: translateY(-50%);
+    transition-duration: 0.75s;
+  }
+
+  .fas {
+    color: transparent;
+    opacity: 0;
+    background-clip: text;
+    background-image: linear-gradient(to bottom, $ohmypink, $ohmypurple);
+  }
+
+  &:hover .fas {
+    opacity: 1;
   }
 }

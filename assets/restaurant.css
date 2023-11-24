@@ -1,5 +1,28 @@
-@import url("http://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("http://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @import url("http://fonts.googleapis.com/css?family=Shrikhand");
+.like-button {
+  position: relative;
+}
+.like-button i {
+  color: black;
+  font-size: 26px;
+  position: absolute;
+  right: 34px;
+  top: -43px;
+  transform: translateY(-50%);
+  transition-duration: 0.75s;
+}
+.like-button .fas {
+  color: transparent;
+  opacity: 0;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
+}
+.like-button:hover .fas {
+  opacity: 1;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -64,6 +87,14 @@ img {
   width: -webkit-fill-available;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .fade-in {
   opacity: 0.5;
   transform: translateY(80px);
@@ -90,7 +121,7 @@ section {
 
 .menu-header h1 {
   font-family: shrikhand, cursive;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 0 auto 0 0;
 }
@@ -111,20 +142,82 @@ section {
   background: linear-gradient(180deg, #ffdff6 0%, #c9abee 100%);
   box-shadow: 1px 13px 17px 0px rgba(109, 109, 109, 0.7);
 }
+.menu-content h2 {
+  padding-top: 32px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 300;
+}
 .menu-content h2:after {
   content: "";
   width: 3rem;
   height: 0.25rem;
-  background-color: #89c8fa;
+  background-color: #99e2d0;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -5px;
 }
 .menu-content-item {
+  display: flex;
   background-color: #fff;
-  border-radius: 10px;
-  width: 335px;
+  border-radius: 20px;
   box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
   margin-bottom: 2em;
   position: relative;
+  overflow: hidden;
+}
+.menu-content-item :hover {
+  cursor: pointer;
+}
+.menu-content-item-text {
+  padding: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-content-item-text h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.menu-content-item-text p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 0;
+}
+.menu-content-item-price {
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+.menu-content-item-check {
+  display: flex;
+  place-items: center;
+  background-color: #99e2d0;
+  margin-right: -4em;
+  border-radius: 0px 20px 20px 0px;
+  width: 4em;
+  transition: all 0.5s;
+  justify-content: center;
+}
+.menu-content-item-check i {
+  display: grid;
+  place-items: center;
+  color: #99e2d0;
+  width: 24px;
+  border-radius: 32px;
+  background-color: white;
+  aspect-ratio: 1/1;
+}
+
+.menu-content-item:hover .menu-content-item-check {
+  margin-right: 0;
+}
+.menu-content-item:hover .menu-content-item-check i {
+  animation: spin 0.75s ease;
 }/*# sourceMappingURL=restaurant.css.map */
