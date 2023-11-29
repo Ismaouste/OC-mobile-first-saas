@@ -1,26 +1,30 @@
 @import url("http://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @import url("http://fonts.googleapis.com/css?family=Shrikhand");
-.like-button {
+.favourite {
   position: relative;
 }
-.like-button i {
+.favourite a {
+  text-decoration: none;
+  position: relative;
+  top: -1em;
+}
+.favourite i {
   color: black;
   font-size: 26px;
-  position: absolute;
-  right: 34px;
-  top: -43px;
-  transform: translateY(-50%);
   transition-duration: 0.75s;
+  position: relative;
 }
-.like-button .fas {
+.favourite .fas {
   color: transparent;
   opacity: 0;
   -webkit-background-clip: text;
-          background-clip: text;
   background-image: linear-gradient(to bottom, #ff79da, #9356dc);
 }
-.like-button:hover .fas {
+.favourite:hover .fas {
   opacity: 1;
+}
+.favourite:hover .far {
+  opacity: 0;
 }
 
 * {

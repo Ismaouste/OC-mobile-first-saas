@@ -1,25 +1,26 @@
 @import url("http://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 @import url("http://fonts.googleapis.com/css?family=Shrikhand");
-.like-button {
+.favourite {
   position: relative;
 }
-.like-button i {
+.favourite a {
+  text-decoration: none;
+}
+.favourite i {
   color: black;
   font-size: 26px;
-  position: absolute;
-  right: 34px;
-  top: -43px;
-  transform: translateY(-50%);
   transition-duration: 0.75s;
+  position: relative;
 }
-.like-button .fas {
+.favourite .fas {
   color: transparent;
   opacity: 0;
   -webkit-background-clip: text;
           background-clip: text;
+  left: -30px;
   background-image: linear-gradient(to bottom, #ff79da, #9356dc);
 }
-.like-button:hover .fas {
+.favourite:hover .fas {
   opacity: 1;
 }
 
@@ -71,6 +72,7 @@ footer .footer {
 footer .footer .footer-logo img {
   filter: invert(1);
   height: 27px;
+  width: auto;
 }
 footer .footer .footer-links {
   display: flex;
@@ -202,16 +204,16 @@ section.section-landing p, section .section-landing p {
   width: 90%;
 }
 section.section-landing a, section .section-landing a {
-  background: linear-gradient(180deg, #fface8 0%, #ae80e5 100%);
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.4);
-  padding: 20px;
+  padding: 1em 3em;
   color: #FFF;
   text-decoration: none;
   border-radius: 25px;
-  transition: 500ms;
+  transition: 300ms;
 }
 section.section-landing a:hover, section .section-landing a:hover {
-  background: linear-gradient(180deg, #ffdff6 0%, #c9abee 100%);
+  background: linear-gradient(180deg, #ffc6ef 0%, #bc95e9 100%);
   box-shadow: 1px 13px 17px 0px rgba(109, 109, 109, 0.7);
 }
 section.section-steps_card, section .section-steps_card {

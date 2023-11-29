@@ -22,43 +22,55 @@ $ohmylightergrey: #eaeaea;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 @mixin cta-button($color1, $color2) {
-  background: linear-gradient(180deg, lighten($color1, 10%) 0%, lighten($color2, 10%) 100%);
+  background: linear-gradient(180deg, lighten($color1, 0%) 0%, lighten($color2, 0%) 100%);
   box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.4);
-  padding: 20px;
+  padding: 1em 3em;
   color: #FFF;
   text-decoration: none;
   border-radius: 25px;
-  transition: 500ms;
+  transition: 300ms;
 
   &:hover {
-    background: linear-gradient(180deg, lighten($color1, 20%) 0%, lighten($color2, 20%) 100%);
+    background: linear-gradient(180deg, lighten($color1, 15%) 0%, lighten($color2, 15%) 100%);
     box-shadow: 1px 13px 17px 0px rgba(109, 109, 109, 0.7);
   }
 }
 
 
-.like-button {
+.favourite {
   position: relative;
-
+  
+  
+a {
+  text-decoration: none;
+  position: relative;
+  top: -1em;
+}
   i {
     color: black;
     font-size: 26px;
-    position: absolute;
-    right: 34px;
-    top: -43px;
-    transform: translateY(-50%);
     transition-duration: 0.75s;
+    position: relative;
   }
 
   .fas {
     color: transparent;
     opacity: 0;
-    background-clip: text;
+    -webkit-background-clip: text;
     background-image: linear-gradient(to bottom, $ohmypink, $ohmypurple);
   }
 
   &:hover .fas {
     opacity: 1;
+  }
+  &:hover .far {
+    opacity: 0;
   }
 }
