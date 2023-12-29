@@ -46,27 +46,37 @@ $ohmylightergrey: #eaeaea;
 
 .favourite {
   position: relative;
-  
-  
-a {
-  text-decoration: none;
-  position: relative;
-  top: -1em;
-}
-  i {
-    color: black;
-    font-size: 26px;
-    transition-duration: 0.75s;
+  width: 26px; 
+  height: 26px; 
+
+  a {
+    text-decoration: none;
     position: relative;
   }
 
-  .fas {
+  i {
+    color: black;
+    font-size: 26px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transition: opacity 0.75s ease;
+  }
+
+  i::before {
+    color: black;
+    transition: color 0.75s;
+  }
+
+  a:hover i::before {
     color: transparent;
-    opacity: 0;
     -webkit-background-clip: text;
     background-image: linear-gradient(to bottom, $ohmypink, $ohmypurple);
   }
-
+  .fas {
+    opacity: 0;
+  }
   &:hover .fas {
     opacity: 1;
   }

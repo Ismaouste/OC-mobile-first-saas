@@ -2,23 +2,33 @@
 @import url("http://fonts.googleapis.com/css?family=Shrikhand");
 .favourite {
   position: relative;
+  width: 26px;
+  height: 26px;
 }
 .favourite a {
   text-decoration: none;
   position: relative;
-  top: -1em;
 }
 .favourite i {
   color: black;
   font-size: 26px;
-  transition-duration: 0.75s;
-  position: relative;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transition: opacity 0.75s ease;
 }
-.favourite .fas {
+.favourite i::before {
+  color: black;
+  transition: color 0.75s;
+}
+.favourite a:hover i::before {
   color: transparent;
-  opacity: 0;
   -webkit-background-clip: text;
   background-image: linear-gradient(to bottom, #ff79da, #9356dc);
+}
+.favourite .fas {
+  opacity: 0;
 }
 .favourite:hover .fas {
   opacity: 1;

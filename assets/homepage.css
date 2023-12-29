@@ -2,26 +2,39 @@
 @import url("http://fonts.googleapis.com/css?family=Shrikhand");
 .favourite {
   position: relative;
+  width: 26px;
+  height: 26px;
 }
 .favourite a {
   text-decoration: none;
+  position: relative;
 }
 .favourite i {
   color: black;
   font-size: 26px;
-  transition-duration: 0.75s;
-  position: relative;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transition: opacity 0.75s ease;
+}
+.favourite i::before {
+  color: black;
+  transition: color 0.75s;
+}
+.favourite a:hover i::before {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
 }
 .favourite .fas {
-  color: transparent;
   opacity: 0;
-  -webkit-background-clip: text;
-          background-clip: text;
-  left: -30px;
-  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
 }
 .favourite:hover .fas {
   opacity: 1;
+}
+.favourite:hover .far {
+  opacity: 0;
 }
 
 * {
@@ -297,17 +310,4 @@ section.section-restaurants-card-content p, section .section-restaurants-card-co
   margin: 0;
   padding-top: 5px;
   padding-bottom: 15px;
-}
-section.section-restaurants-card-content .fa-heart, section .section-restaurants-card-content .fa-heart {
-  font-size: 1.3em;
-  background-color: transparent;
-  transition: all 0.3s ease-in-out;
-}
-section.section-restaurants-card-content .fa-heart:hover, section .section-restaurants-card-content .fa-heart:hover {
-  font-weight: 900;
-  background: -webkit-linear-gradient(13deg, #ff79da 0%, #9356dc 66%);
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: pointer;
 }/*# sourceMappingURL=homepage.css.map */
