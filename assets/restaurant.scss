@@ -24,6 +24,8 @@ img {
   }
 }
 
+
+
 $fade-in-duration: 2.5s; // Set the animation duration
 $initial-opacity: 0.5; // Initial opacity
 $final-opacity: 1; // Final opacity
@@ -136,8 +138,16 @@ section {
       transform: scale(0);
       max-width: 100%;
 
-      :hover {
+      &:hover {
         cursor: pointer;
+
+        .menu-content-item-check {
+          margin-right: 0;
+
+          i {
+            animation: spin 0.75s ease;
+          }
+        }
       }
 
       &-text {
@@ -192,14 +202,6 @@ section {
         }
       }
     }
-  }
-}
-
-.menu-content-item:hover .menu-content-item-check {
-  margin-right: 0;
-
-  i {
-    animation: spin 0.75s ease;
   }
 }
 

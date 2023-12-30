@@ -1,3 +1,4 @@
+// Color Variables
 $ohmygreen: #99e2d0;
 $ohmydarkgreen: #008766;
 $ohmyblue: #89c8fa;
@@ -9,14 +10,10 @@ $ohmygrey: #353535;
 $ohmylightgrey: #f6f6f6;
 $ohmylightergrey: #eaeaea;
 
+// Mixins
 @mixin google-font($family) {
-  @import url("http://fonts.googleapis.com/css?family=#{$family}");
+  @import url("https://fonts.googleapis.com/css?family=#{$family}");
 }
-
-@include google-font("Roboto:300,400,500,700");
-@include google-font("Shrikhand:300,400,500,600,700");
-
-
 
 @mixin shadow {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -43,11 +40,18 @@ $ohmylightergrey: #eaeaea;
   }
 }
 
+// Include Google Fonts
+@include google-font("Roboto:300,400,500,700");
+@include google-font("Shrikhand:300,400,500,600,700");
 
+// Common Sizes
+$favourite-size: 26px;
+
+// Styles
 .favourite {
   position: relative;
-  width: 26px; 
-  height: 26px; 
+  width: $favourite-size;
+  height: $favourite-size;
 
   a {
     text-decoration: none;
@@ -56,7 +60,7 @@ $ohmylightergrey: #eaeaea;
 
   i {
     color: black;
-    font-size: 26px;
+    font-size: $favourite-size;
     position: absolute;
     z-index: 1;
     top: 0;
@@ -74,12 +78,15 @@ $ohmylightergrey: #eaeaea;
     -webkit-background-clip: text;
     background-image: linear-gradient(to bottom, $ohmypink, $ohmypurple);
   }
+
   .fas {
     opacity: 0;
   }
+
   &:hover .fas {
     opacity: 1;
   }
+
   &:hover .far {
     opacity: 0;
   }

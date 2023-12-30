@@ -1,5 +1,5 @@
-@import url("http://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
-@import url("http://fonts.googleapis.com/css?family=Shrikhand:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Shrikhand:300,400,500,600,700");
 .favourite {
   position: relative;
   width: 26px;
@@ -223,8 +223,14 @@ section {
   transform: scale(0);
   max-width: 100%;
 }
-.menu-content-item :hover {
+.menu-content-item:hover {
   cursor: pointer;
+}
+.menu-content-item:hover .menu-content-item-check {
+  margin-right: 0;
+}
+.menu-content-item:hover .menu-content-item-check i {
+  animation: spin 0.75s ease;
 }
 .menu-content-item-text {
   padding: 1em;
@@ -274,13 +280,6 @@ section {
   border-radius: 32px;
   background-color: white;
   aspect-ratio: 1/1;
-}
-
-.menu-content-item:hover .menu-content-item-check {
-  margin-right: 0;
-}
-.menu-content-item:hover .menu-content-item-check i {
-  animation: spin 0.75s ease;
 }
 
 .delay-1 {
