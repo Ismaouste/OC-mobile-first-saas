@@ -52,11 +52,8 @@ $favourite-size: 26px;
   position: relative;
   width: $favourite-size;
   height: $favourite-size;
-
-  a {
     text-decoration: none;
-    position: relative;
-  }
+  
 
   i {
     color: black;
@@ -73,7 +70,7 @@ $favourite-size: 26px;
     transition: color 0.75s;
   }
 
-  a:hover i::before {
+  &:hover i::before {
     color: transparent;
     -webkit-background-clip: text;
     background-image: linear-gradient(to bottom, $ohmypink, $ohmypurple);
