@@ -1,0 +1,57 @@
+// Common Sizes
+$favourite-size: 26px;
+
+// Styles
+.favourite {
+    position: relative;
+    width: $favourite-size;
+    height: $favourite-size;
+    text-decoration: none;
+
+
+    i {
+        color: black;
+        font-size: $favourite-size;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        transition: opacity 0.75s ease;
+    }
+
+    i::before {
+        color: black;
+        transition: color 0.75s;
+    }
+
+    &:hover i::before {
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(to bottom, $ohmypink, $ohmypurple);
+    }
+
+    .fas {
+        opacity: 0;
+    }
+
+    &:hover .fas {
+        opacity: 1;
+    }
+
+    &:hover .far {
+        opacity: 0;
+    }
+}
+
+.badge-new::after {
+    content: "Nouveau";
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: $ohmygreen;
+    color: $ohmydarkgreen;
+  }

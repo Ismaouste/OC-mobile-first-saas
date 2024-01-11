@@ -1,89 +1,7 @@
-@import "nav";
-$loader-size: 80px;
- 
-body {
-  margin: 0; 
-}
-.loader { 
-  position: fixed;
-  z-index: 50; 
-  opacity: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: $loader-size;
-  height: $loader-size;
-  border: 4px solid transparent;
-  border-top: 4px solid $ohmypink;
-  border-radius: 50%;
-  animation: loaderAnimation 2.5s linear forwards; 
-}
-
-.content {
-  background-color: white;
-  overflow: hidden; 
-  position: relative;
-  height: 100vh;
-  opacity: 0;
-  animation: contentFadeIn 4.5s cubic-bezier(0.25, 0.46, 0.65, 1) forwards, unlockOverflow 4s ease-in-out forwards; 
-  top: 0;
-  bottom: 0;
-  width: 100%;
-} 
-
-@keyframes unlockOverflow {
-  0% {
-  }
-  100% {
-    overflow: visible; 
-  }
-}
-
-@keyframes loaderAnimation {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-    border-top: 4px solid $ohmypink; 
-  }
-  50% {
-    transform: translate(-50%, -50%) rotate(180deg);
-    border-top: 4px solid $ohmypurple;
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-    border-top: 4px solid $ohmypink;
-    opacity: 0; 
-  }
-}
-
-@keyframes contentFadeIn { 
-  0% { 
-    opacity: 0;
-    background-color: transparent;
-  }
-  100% {
-    opacity: 1;
-    background-color: white;
-  } 
-} 
-
-.badge-new::after { 
-  content: "Nouveau";
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  font-weight: 700;
-  padding: 10px;
-  border-radius: 2px;
-  background-color: $ohmygreen;
-  color: $ohmydarkgreen;
-}
+@import "../main";
 
 section {
   padding: 20px;
-
-  img {
-    width: -webkit-fill-available;
-  }
 
   h1 {
     font-size: 1.5rem;
@@ -95,12 +13,12 @@ section {
   & .section {
     display: flex;
     align-items: center;
-    // justify-content: center;
     justify-content: space-evenly;
     text-align: center;
-    flex-direction: row;
-    @media (max-width: 768px) {
-      flex-direction: column;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
     }
 
     &-landing {
@@ -126,6 +44,7 @@ section {
         max-width: 530px;
         width: 90%;
       }
+
       a {
         @include cta-button($ohmypink, $ohmypurple);
       }
@@ -142,10 +61,12 @@ section {
         position: relative;
         margin-bottom: 30px;
         font-weight: 700;
+
         i {
           padding-right: 30px;
           color: #7e7e7e;
         }
+
         .number {
           position: absolute;
           left: 0;
@@ -158,14 +79,17 @@ section {
           color: white;
           border-radius: 50%;
         }
+
         &:hover {
           background-color: $ohmylightpurple;
+
           i {
             color: $ohmypurple;
           }
         }
       }
     }
+
     &-restaurants {
       display: flex;
       justify-content: space-evenly;
@@ -176,12 +100,13 @@ section {
       &-card {
         background-color: #fff;
         border-radius: 10px;
-        width: 335px;
+        width: 100%;
         box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
         margin-bottom: 2em;
         position: relative;
-        @media (max-width: 768px) {
-          width: 100%;
+
+        @media (min-width: 768px) {
+          width: 335px;
         }
 
         a {
@@ -204,10 +129,12 @@ section {
           justify-content: space-between;
           padding-left: 15px;
           padding-right: 20px;
+
           h2 {
             margin: 0;
             padding-top: 10px;
           }
+
           p {
             margin: 0;
             padding-top: 5px;

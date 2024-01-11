@@ -1,0 +1,29 @@
+.gray-background {
+  background-color: $ohmylightgrey;
+}
+
+header {
+  text-align: center;
+
+  nav {
+    display: flex;
+    height: 63px;
+    align-items: center;
+    justify-content: center;
+
+    @include shadow;
+
+    .logo img {
+      height: 36px;
+    }
+  }
+
+  .location {
+    display: flex;
+    justify-content: center;
+    background-color: $ohmylightergrey;
+    color: $ohmygrey;
+    height: 50px;
+  }
+}
+

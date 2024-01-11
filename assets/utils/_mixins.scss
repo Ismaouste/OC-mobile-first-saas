@@ -1,0 +1,35 @@
+
+// Mixins
+@mixin google-font($family) {
+    @import url("https://fonts.googleapis.com/css?family=#{$family}");
+  }
+  
+    // Include Google Fonts
+    @include google-font("Roboto:300,400,500,700");
+    @include google-font("Shrikhand:300,400,500,600,700");
+    
+  @mixin shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  @mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  @mixin cta-button($color1, $color2) {
+    background: linear-gradient(180deg, lighten($color1, 0%) 0%, lighten($color2, 0%) 100%);
+    box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.4);
+    padding: 1em 3em;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 300ms;
+  
+    &:hover {
+      background: linear-gradient(180deg, lighten($color1, 15%) 0%, lighten($color2, 15%) 100%);
+      box-shadow: 1px 13px 17px 0px rgba(109, 109, 109, 0.7);
+    }
+  }
+  

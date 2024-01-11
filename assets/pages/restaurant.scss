@@ -1,52 +1,4 @@
-@import "nav";
-
-img {
-  width: -webkit-fill-available;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(-270deg);
-  }
-
-  100% {
-    transform: rotate(0);
-  }
-}
-
-@keyframes itemAppear {
-  0% {
-    transform: scale(0)
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-$fade-in-duration: 2.5s; // Set the animation duration
-$initial-opacity: 0.5; // Initial opacity
-$final-opacity: 1; // Final opacity
-$initial-translate: 80px; // Increased initial translation for more visibility
-$final-translate: 0; // Final translation
-
-.fade-in {
-  opacity: $initial-opacity;
-  transform: translateY($initial-translate);
-  animation: fadeInAnimation $fade-in-duration ease-in-out forwards;
-
-  @keyframes fadeInAnimation {
-    0% {
-      opacity: $initial-opacity;
-      transform: translateY($initial-translate);
-    }
-
-    100% {
-      opacity: $final-opacity;
-      transform: translateY($final-translate);
-    }
-  }
-}
+@import "../main";
 
 #cover {
   max-height: 383px;
@@ -66,7 +18,6 @@ section {
 
 .menu {
 
-
   &-header {
 
     max-width: 634px;
@@ -82,10 +33,10 @@ section {
       font-family: shrikhand, cursive;
       font-size: 2rem;
       font-weight: 700;
-      margin: 0 3em 0 0;
+      margin: 0 1em 0 0;
 
-      @media (max-width: 650px) {
-        margin: 0 1em 0 0;
+      @media (min-width: 650px) {
+        margin: 0 3em 0 0;
       }
     }
   }
@@ -129,8 +80,8 @@ section {
       margin-bottom: 2em;
       position: relative;
       overflow: hidden;
-
-      animation: itemAppear .6s;
+      animation-duration: 0.6s;
+      animation-name: itemAppear;
       animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
       animation-fill-mode: both;
       transform: scale(0);
@@ -155,7 +106,6 @@ section {
         text-overflow: ellipsis;
 
         h3 {
-          font-family: "Roboto", sans-serif;
           font-weight: 500;
           font-size: 1.2rem;
           margin: 0;
@@ -163,7 +113,7 @@ section {
         }
 
         p {
-          font-family: "Roboto", sans-serif;
+
           font-weight: 300;
           font-size: 1rem;
           margin: 0;
@@ -200,11 +150,5 @@ section {
         }
       }
     }
-  }
-}
-
-@for $i from 1 through 9 {
-  .delay-#{$i} {
-    animation-delay: ($i - 1) * 0.1s;
   }
 }

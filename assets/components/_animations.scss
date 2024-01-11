@@ -1,0 +1,113 @@
+// Homepage
+
+@keyframes unlockOverflow {
+    0% {}
+
+    100% {
+        overflow: visible;
+    }
+}
+
+@keyframes loaderAnimation {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        border-top: 4px solid $ohmypink;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg);
+        border-top: 4px solid $ohmypurple;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        border-top: 4px solid $ohmypink;
+        opacity: 0;
+    }
+}
+
+@keyframes contentFadeIn {
+    0% {
+        opacity: 0;
+        background-color: transparent;
+    }
+
+    100% {
+        opacity: 1;
+        background-color: white;
+    }
+}
+
+$loader-size: 80px;
+
+.loader {
+  position: fixed;
+  z-index: 50;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $loader-size;
+  height: $loader-size;
+  border: 4px solid transparent;
+  border-top: 4px solid $ohmypink;
+  border-radius: 50%;
+  animation: loaderAnimation 2.5s linear forwards;
+}
+
+.content {
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  opacity: 0;
+  animation: contentFadeIn 4.5s cubic-bezier(0.25, 0.46, 0.65, 1) forwards, unlockOverflow 4s ease-in-out forwards;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+// Restaurant page
+@keyframes spin {
+    0% {
+        transform: rotate(-270deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes itemAppear {
+    0% {
+        transform: scale(0)
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+$fade-in-duration: 2.5s; // Set the animation duration
+$initial-opacity: 0.5; // Initial opacity
+$final-opacity: 1; // Final opacity
+$initial-translate: 80px; // Increased initial translation for more visibility
+$final-translate: 0; // Final translation
+
+.fade-in {
+    opacity: $initial-opacity;
+    transform: translateY($initial-translate);
+    animation: fadeInAnimation $fade-in-duration ease-in-out forwards;
+
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: $initial-opacity;
+            transform: translateY($initial-translate);
+        }
+
+        100% {
+            opacity: $final-opacity;
+            transform: translateY($final-translate);
+        }
+    }
+}
