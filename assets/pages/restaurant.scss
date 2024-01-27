@@ -6,13 +6,13 @@
 }
 
 section {
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 40px 40px 0 0;
   padding: 1em 1em 2em 1em;
-  background-color: $ohmylightgrey;
+  background-color: #f6f6f6;
   position: relative;
   max-width: 1055px;
   margin: 0 auto;
-  margin-top: -5%;
+  margin-top: -15%;
 
 }
 
@@ -21,23 +21,25 @@ section {
   &-header {
 
     max-width: 634px;
+    padding: 1em 1em 1em 0;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     @media (min-width: 800px) {
       justify-content: center;
     }
 
     h1 {
-      font-family: shrikhand, cursive;
-      font-size: 2rem;
-      font-weight: 700;
-      margin: 0 1em 0 0;
-
-      @media (min-width: 650px) {
-        margin: 0 3em 0 0;
-      }
+      font-family: Shrikhand;
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 41px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin: 0 1em 0 0.2em;
     }
   }
 
@@ -55,11 +57,15 @@ section {
     margin: 0 auto;
 
     h2 {
-      padding-top: 32px;
       font-family: "Roboto", sans-serif;
       text-transform: uppercase;
       position: relative;
       font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: left;
+
     }
 
     h2:after {
@@ -76,8 +82,7 @@ section {
       display: flex;
       background-color: #fff;
       border-radius: 20px;
-      box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
-      margin-bottom: 2em;
+      margin-bottom: 1em;
       position: relative;
       overflow: hidden;
       animation-duration: 0.6s;
@@ -86,6 +91,7 @@ section {
       animation-fill-mode: both;
       transform: scale(0);
       max-width: 100%;
+      box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
 
       &:hover {
         cursor: pointer;

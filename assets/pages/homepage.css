@@ -197,7 +197,14 @@ header nav {
   height: 63px;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 100;
+  box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
+}
+@media (min-width: 1024px) {
+  header nav {
+    height: 96px;
+  }
 }
 header nav .logo img {
   height: 36px;
@@ -208,42 +215,101 @@ header .location {
   background-color: #eaeaea;
   color: #353535;
   height: 50px;
+  font-weight: 500;
+  line-height: 18.75px;
+  position: relative;
+  z-index: 99;
+  box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
+}
+header .location i {
+  width: 25px;
+  color: #474747;
 }
 
 footer {
+  background-color: #353535;
   width: 100%;
   bottom: 0;
+}
+@media (min-width: 1024px) {
+  footer {
+    height: 114px;
+  }
 }
 footer .footer {
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 22px 25px;
-  background-color: #353535;
+}
+@media (min-width: 1024px) {
+  footer .footer {
+    flex-direction: row-reverse;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  footer .footer .footer-logo {
+    display: flex;
+  }
 }
 footer .footer .footer-logo img {
   filter: invert(1);
-  height: 27px;
-  width: auto;
+  width: 140px;
+  padding: 0 0 10px 0;
+}
+@media (min-width: 1024px) {
+  footer .footer .footer-logo img {
+    margin-top: auto;
+    padding: 0;
+  }
 }
 footer .footer .footer-links {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
+@media (min-width: 1024px) {
+  footer .footer .footer-links {
+    flex-direction: row;
+    gap: 16px;
+    margin-right: 2em;
+    align-items: flex-end;
+  }
+}
 footer .footer .footer-links a {
   color: white;
-  font: 400 14px/1.5em "Roboto", sans-serif;
+  font: 500 16px "Roboto", sans-serif;
   text-decoration: none;
+  line-height: 18.75px;
+}
+footer .footer .footer-links a i {
+  width: 25px;
+}
+
+.desktop-container {
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 section {
   padding: 20px;
 }
 section h1 {
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 700;
-  margin-right: auto;
+  line-height: 28.13px;
+  text-align: center;
+  letter-spacing: 0em;
+}
+@media (min-width: 1024px) {
+  section h1 {
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: 0em;
+  }
 }
 section.section, section .section {
   display: flex;
@@ -251,6 +317,8 @@ section.section, section .section {
   justify-content: space-evenly;
   text-align: center;
   flex-direction: column;
+  gap: 30px;
+  padding: 10px 0 30px 0;
 }
 @media (min-width: 768px) {
   section.section, section .section {
@@ -268,25 +336,32 @@ section.section-landing, section .section-landing {
   background-color: #f6f6f6;
   min-height: 290px;
 }
-section.section-landing h1, section .section-landing h1 {
+section.section-landing h2, section .section-landing h2 {
   margin: 0 auto;
   min-width: 275px;
   max-width: 645px;
   width: 80%;
+  font-weight: 700;
+  line-height: 28.12px;
 }
 section.section-landing p, section .section-landing p {
   min-width: 275px;
   max-width: 530px;
-  width: 90%;
+  font-size: 18px;
+  line-height: 21.09px;
+  color: #353535;
 }
 section.section-landing a, section .section-landing a {
+  line-height: 18.75px;
+  font-weight: 400;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.4);
-  padding: 1em 3em;
-  color: #FFF;
+  padding: 12px 20px;
+  color: rgba(255, 255, 255, 0.8784313725);
   text-decoration: none;
   border-radius: 25px;
   transition: 300ms;
+  max-width: 220px;
 }
 section.section-landing a:hover, section .section-landing a:hover {
   background: linear-gradient(180deg, #ffc6ef 0%, #bc95e9 100%);
@@ -297,27 +372,40 @@ section.section-steps_card, section .section-steps_card {
   align-items: center;
   flex-wrap: wrap;
   background-color: #f6f6f6;
-  padding: 20px 35px;
+  padding: 15px 20px;
   border-radius: 20px;
   position: relative;
-  margin-bottom: 30px;
-  font-weight: 700;
+  font-weight: 500;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  width: 94%;
+  height: 72.38px;
+}
+@media (min-width: 768px) {
+  section.section-steps_card, section .section-steps_card {
+    width: -webkit-fill-available;
+    padding: 5px 5px 5px 20px;
+    justify-content: start;
+  }
 }
 section.section-steps_card i, section .section-steps_card i {
-  padding-right: 30px;
+  padding-right: 10px;
   color: #7e7e7e;
+}
+section.section-steps_card p, section .section-steps_card p {
+  margin: 0;
 }
 section.section-steps_card .number, section .section-steps_card .number {
   position: absolute;
   left: 0;
-  transform: translate(-15px);
-  width: 30px;
-  height: 30px;
+  transform: translate(-12px);
+  width: 24px;
+  height: 24px;
   text-align: center;
-  padding: 5px;
+  padding: 4px;
   background-color: #9356dc;
   color: white;
   border-radius: 50%;
+  font-size: 14.18px;
 }
 section.section-steps_card:hover, section .section-steps_card:hover {
   background-color: #f5edff;
@@ -329,20 +417,25 @@ section.section-restaurants, section .section-restaurants {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  max-width: 860px;
-  margin: 0 auto;
+  gap: 18px;
+  margin: 0 auto 2em;
+}
+@media (min-width: 768px) {
+  section.section-restaurants, section .section-restaurants {
+    gap: 2.5%;
+    row-gap: 3vw;
+  }
 }
 section.section-restaurants-card, section .section-restaurants-card {
   background-color: #fff;
   border-radius: 10px;
   width: 100%;
   box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
-  margin-bottom: 2em;
   position: relative;
 }
 @media (min-width: 768px) {
   section.section-restaurants-card, section .section-restaurants-card {
-    width: 335px;
+    width: 48.5%;
   }
 }
 section.section-restaurants-card a, section .section-restaurants-card a {
@@ -368,9 +461,20 @@ section.section-restaurants-card-content, section .section-restaurants-card-cont
 section.section-restaurants-card-content h2, section .section-restaurants-card-content h2 {
   margin: 0;
   padding-top: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 section.section-restaurants-card-content p, section .section-restaurants-card-content p {
   margin: 0;
   padding-top: 5px;
   padding-bottom: 15px;
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
 }/*# sourceMappingURL=homepage.css.map */

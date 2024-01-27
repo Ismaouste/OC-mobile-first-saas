@@ -10,9 +10,13 @@ header {
     height: 63px;
     align-items: center;
     justify-content: center;
-
+    position: relative;
+    z-index: 100;
     @include shadow;
 
+    @media (min-width: 1024px) {
+      height: 96px;
+    }
     .logo img {
       height: 36px;
     }
@@ -24,6 +28,16 @@ header {
     background-color: $ohmylightergrey;
     color: $ohmygrey;
     height: 50px;
+    font-weight: 500;
+    line-height: 18.75px;
+    position: relative;
+    z-index: 99;
+    @include shadow;
+    
+    i {
+      width: 25px;
+      color: #474747;
+    }
   }
 }
 

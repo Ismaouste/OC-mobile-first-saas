@@ -9,7 +9,7 @@
     @include google-font("Shrikhand:300,400,500,600,700");
     
   @mixin shadow {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
   }
   
   @mixin ellipsis {
@@ -19,13 +19,16 @@
   }
   
   @mixin cta-button($color1, $color2) {
+    line-height: 18.75px;
+    font-weight: 400;
     background: linear-gradient(180deg, lighten($color1, 0%) 0%, lighten($color2, 0%) 100%);
     box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.4);
-    padding: 1em 3em;
-    color: #FFF;
+    padding: 12px 20px;
+    color: #ffffffe0;
     text-decoration: none;
     border-radius: 25px;
     transition: 300ms;
+    max-width: 220px;
   
     &:hover {
       background: linear-gradient(180deg, lighten($color1, 15%) 0%, lighten($color2, 15%) 100%);

@@ -197,7 +197,14 @@ header nav {
   height: 63px;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 100;
+  box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
+}
+@media (min-width: 1024px) {
+  header nav {
+    height: 96px;
+  }
 }
 header nav .logo img {
   height: 36px;
@@ -208,33 +215,76 @@ header .location {
   background-color: #eaeaea;
   color: #353535;
   height: 50px;
+  font-weight: 500;
+  line-height: 18.75px;
+  position: relative;
+  z-index: 99;
+  box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
+}
+header .location i {
+  width: 25px;
+  color: #474747;
 }
 
 footer {
+  background-color: #353535;
   width: 100%;
   bottom: 0;
+}
+@media (min-width: 1024px) {
+  footer {
+    height: 114px;
+  }
 }
 footer .footer {
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 22px 25px;
-  background-color: #353535;
+}
+@media (min-width: 1024px) {
+  footer .footer {
+    flex-direction: row-reverse;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  footer .footer .footer-logo {
+    display: flex;
+  }
 }
 footer .footer .footer-logo img {
   filter: invert(1);
-  height: 27px;
-  width: auto;
+  width: 140px;
+  padding: 0 0 10px 0;
+}
+@media (min-width: 1024px) {
+  footer .footer .footer-logo img {
+    margin-top: auto;
+    padding: 0;
+  }
 }
 footer .footer .footer-links {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
+@media (min-width: 1024px) {
+  footer .footer .footer-links {
+    flex-direction: row;
+    gap: 16px;
+    margin-right: 2em;
+    align-items: flex-end;
+  }
+}
 footer .footer .footer-links a {
   color: white;
-  font: 400 14px/1.5em "Roboto", sans-serif;
+  font: 500 16px "Roboto", sans-serif;
   text-decoration: none;
+  line-height: 18.75px;
+}
+footer .footer .footer-links a i {
+  width: 25px;
 }
 
 #cover {
@@ -244,20 +294,22 @@ footer .footer .footer-links a {
 }
 
 section {
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 40px 40px 0 0;
   padding: 1em 1em 2em 1em;
   background-color: #f6f6f6;
   position: relative;
   max-width: 1055px;
   margin: 0 auto;
-  margin-top: -5%;
+  margin-top: -15%;
 }
 
 .menu-header {
   max-width: 634px;
+  padding: 1em 1em 1em 0;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 @media (min-width: 800px) {
   .menu-header {
@@ -265,28 +317,30 @@ section {
   }
 }
 .menu-header h1 {
-  font-family: shrikhand, cursive;
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0 1em 0 0;
-}
-@media (min-width: 650px) {
-  .menu-header h1 {
-    margin: 0 3em 0 0;
-  }
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0 1em 0 0.2em;
 }
 .menu-footer {
   display: flex;
   justify-content: center;
 }
 .menu-footer a {
+  line-height: 18.75px;
+  font-weight: 400;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.4);
-  padding: 1em 3em;
-  color: #FFF;
+  padding: 12px 20px;
+  color: rgba(255, 255, 255, 0.8784313725);
   text-decoration: none;
   border-radius: 25px;
   transition: 300ms;
+  max-width: 220px;
 }
 .menu-footer a:hover {
   background: linear-gradient(180deg, #ffc6ef 0%, #bc95e9 100%);
@@ -297,11 +351,14 @@ section {
   margin: 0 auto;
 }
 .menu-content h2 {
-  padding-top: 32px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   position: relative;
   font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 .menu-content h2:after {
   content: "";
@@ -316,8 +373,7 @@ section {
   display: flex;
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   position: relative;
   overflow: hidden;
   animation-duration: 0.6s;
@@ -326,6 +382,7 @@ section {
   animation-fill-mode: both;
   transform: scale(0);
   max-width: 100%;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
 }
 .menu-content-item:hover {
   cursor: pointer;

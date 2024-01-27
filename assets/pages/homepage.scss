@@ -1,12 +1,26 @@
 @import "../main";
 
+.desktop-container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
 section {
   padding: 20px;
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
-    margin-right: auto;
+    line-height: 28.13px;
+    text-align: center;
+    letter-spacing: 0em;
+    @media (min-width: 1024px) {
+      font-family: Roboto;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 47px;
+      letter-spacing: 0em;
+    }
   }
 
   &.section,
@@ -16,10 +30,13 @@ section {
     justify-content: space-evenly;
     text-align: center;
     flex-direction: column;
+    gap: 30px;
+    padding: 10px 0 30px 0;
 
     @media (min-width: 768px) {
       flex-direction: row;
     }
+
 
     &-landing {
       display: flex;
@@ -32,17 +49,22 @@ section {
       background-color: $ohmylightgrey;
       min-height: 290px;
 
-      h1 {
+      h2 {
         margin: 0 auto;
         min-width: 275px;
         max-width: 645px;
         width: 80%;
+        font-weight: 700;
+        line-height: 28.12px;
+
       }
 
       p {
         min-width: 275px;
         max-width: 530px;
-        width: 90%;
+        font-size: 18px;
+        line-height: 21.09px;
+        color: #353535;
       }
 
       a {
@@ -56,28 +78,38 @@ section {
         align-items: center;
         flex-wrap: wrap;
         background-color: $ohmylightgrey;
-        padding: 20px 35px;
+        padding: 15px 20px;
         border-radius: 20px;
         position: relative;
-        margin-bottom: 30px;
-        font-weight: 700;
-
+        font-weight: 500;
+        box-shadow: 0px 4px 15px 0px #00000026;
+        width: 94%;
+        height: 72.38px;
+        @media (min-width: 768px) {
+          width: -webkit-fill-available;
+          padding: 5px 5px 5px 20px;
+          justify-content: start;
+        }
         i {
-          padding-right: 30px;
+          padding-right: 10px;
           color: #7e7e7e;
         }
-
+        p {
+          margin: 0;
+        }
         .number {
           position: absolute;
           left: 0;
-          transform: translate(-15px);
-          width: 30px;
-          height: 30px;
+          transform: translate(-12px);
+          width: 24px;
+          height: 24px;
           text-align: center;
-          padding: 5px;
+          padding: 4px;
           background-color: $ohmypurple;
           color: white;
           border-radius: 50%;
+          font-size: 14.18px;
+
         }
 
         &:hover {
@@ -94,19 +126,23 @@ section {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
-      max-width: 860px;
-      margin: 0 auto;
-
+      // max-width: 860px;
+      gap: 18px;
+      margin: 0 auto 2em;
+      @media (min-width: 768px) {
+        gap: 2.5%;
+        row-gap: 3vw;
+      }
       &-card {
         background-color: #fff;
         border-radius: 10px;
         width: 100%;
-        box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
-        margin-bottom: 2em;
+        @include shadow;
+        
         position: relative;
 
         @media (min-width: 768px) {
-          width: 335px;
+          width: 48.5%;
         }
 
         a {
@@ -133,12 +169,23 @@ section {
           h2 {
             margin: 0;
             padding-top: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 21px;
+            letter-spacing: 0em;
+            text-align: left;
           }
 
           p {
             margin: 0;
             padding-top: 5px;
             padding-bottom: 15px;
+            font-family: Roboto;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
           }
         }
       }
