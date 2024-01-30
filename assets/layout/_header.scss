@@ -12,10 +12,12 @@ header {
     justify-content: center;
     position: relative;
     z-index: 100;
+    transition: all 300ms ease;
     @include shadow;
 
-    @media (min-width: 1024px) {
+    @media (min-width: $desktop) {
       height: 96px;
+      box-shadow: unset;
     }
     .logo img {
       height: 36px;
@@ -32,8 +34,12 @@ header {
     line-height: 18.75px;
     position: relative;
     z-index: 99;
+    transition: all 300ms ease;
     @include shadow;
-    
+
+    @media (min-width: $desktop) {
+      box-shadow: unset;
+    }
     i {
       width: 25px;
       color: #474747;

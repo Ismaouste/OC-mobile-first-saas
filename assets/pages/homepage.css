@@ -106,14 +106,6 @@ img {
   width: 100%;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(-270deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
 @keyframes itemAppear {
   0% {
     transform: scale(0);
@@ -199,11 +191,13 @@ header nav {
   justify-content: center;
   position: relative;
   z-index: 100;
+  transition: all 300ms ease;
   box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
 }
 @media (min-width: 1024px) {
   header nav {
     height: 96px;
+    box-shadow: unset;
   }
 }
 header nav .logo img {
@@ -219,7 +213,13 @@ header .location {
   line-height: 18.75px;
   position: relative;
   z-index: 99;
+  transition: all 300ms ease;
   box-shadow: -2px 5px 16px -4px rgba(0, 0, 0, 0.301);
+}
+@media (min-width: 1024px) {
+  header .location {
+    box-shadow: unset;
+  }
 }
 header .location i {
   width: 25px;
@@ -301,6 +301,7 @@ section h1 {
   line-height: 28.13px;
   text-align: center;
   letter-spacing: 0em;
+  transition: all 300ms ease;
 }
 @media (min-width: 1024px) {
   section h1 {
@@ -352,20 +353,20 @@ section.section-landing p, section .section-landing p {
   color: #353535;
 }
 section.section-landing a, section .section-landing a {
+  padding: 12px 20px;
   line-height: 18.75px;
   font-weight: 400;
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.4);
-  padding: 12px 20px;
-  color: rgba(255, 255, 255, 0.8784313725);
+  color: #ffffff;
   text-decoration: none;
   border-radius: 25px;
-  transition: 300ms;
   max-width: 220px;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  transition: all 300ms ease-out;
 }
 section.section-landing a:hover, section .section-landing a:hover {
-  background: linear-gradient(180deg, #ffc6ef 0%, #bc95e9 100%);
-  box-shadow: 1px 13px 17px 0px rgba(109, 109, 109, 0.7);
+  background: linear-gradient(180deg, #ff93e1 0%, #a16be0 100%);
+  box-shadow: 1px 8px 10px 0px rgba(0, 0, 0, 0.2509803922);
 }
 section.section-steps_card, section .section-steps_card {
   display: flex;
@@ -379,6 +380,7 @@ section.section-steps_card, section .section-steps_card {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   width: 94%;
   height: 72.38px;
+  transition: all 300ms ease;
 }
 @media (min-width: 768px) {
   section.section-steps_card, section .section-steps_card {

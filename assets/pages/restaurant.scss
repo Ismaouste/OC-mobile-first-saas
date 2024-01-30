@@ -12,8 +12,7 @@ section {
   position: relative;
   max-width: 1055px;
   margin: 0 auto;
-  margin-top: -15%;
-
+  margin-top: -40px;
 }
 
 .menu {
@@ -27,8 +26,9 @@ section {
     align-items: center;
     justify-content: space-between;
 
-    @media (min-width: 800px) {
+    @media (min-width:$tablet) {
       justify-content: center;
+      padding: 1.5em 1em 1.5em 0;
     }
 
     h1 {
@@ -48,6 +48,8 @@ section {
     justify-content: center;
 
     a {
+      padding: 0.9em 2.5em;
+      margin-top: 2em;
       @include cta-button($ohmypink, $ohmypurple);
     }
   }
@@ -98,10 +100,6 @@ section {
 
         .menu-content-item-check {
           margin-right: 0;
-
-          i {
-            animation: spin 0.75s ease;
-          }
         }
       }
 
@@ -132,6 +130,7 @@ section {
         align-items: flex-end;
         margin-left: auto;
         padding-right: 1em;
+        font-weight: 500;
       }
 
       &-check {
