@@ -19,6 +19,27 @@ header {
       height: 96px;
       box-shadow: unset;
     }
+    .action-btn {
+      display: none;
+      position: absolute;
+      width: 30px;
+      color: black;
+      height: 30px;
+      top: 17px;
+      left: 17px;
+      transition: all 300ms ease;
+      @media (min-width: $mobile) {
+        display: unset;
+      }
+      @media (min-width: $desktop) {
+        top: 33px;        
+      }
+
+      i {
+        font-size: 19px;
+        vertical-align: -webkit-baseline-middle;
+      }
+    }
     .logo img {
       height: 36px;
     }

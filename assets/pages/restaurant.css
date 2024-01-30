@@ -200,6 +200,30 @@ header nav {
     box-shadow: unset;
   }
 }
+header nav .action-btn {
+  display: none;
+  position: absolute;
+  width: 30px;
+  color: black;
+  height: 30px;
+  top: 17px;
+  left: 17px;
+  transition: all 300ms ease;
+}
+@media (min-width: 320px) {
+  header nav .action-btn {
+    display: unset;
+  }
+}
+@media (min-width: 1024px) {
+  header nav .action-btn {
+    top: 33px;
+  }
+}
+header nav .action-btn i {
+  font-size: 19px;
+  vertical-align: -webkit-baseline-middle;
+}
 header nav .logo img {
   height: 36px;
 }
